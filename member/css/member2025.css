@@ -29,7 +29,13 @@
 
 @media (min-width: 1200px) {
     #content {
-        margin-top: 100px;
+        margin-top: 160px;
+    }
+}
+
+@media (min-width: 767px) {
+    #content {
+        margin-top: 120px;
     }
 }
 
@@ -645,9 +651,12 @@ banner
     margin: 40px 16px;
   }
 
-  .member-box-left,
+  .member-box-left {
+    padding: 32px 25px 0;
+  }
+
   .member-box-right {
-    padding: 32px 24px;
+    padding: 0 25px 32px ;
   }
 
   .member-box-left::after {
@@ -662,7 +671,7 @@ banner
 @media (max-width: 667.98px) {
   .member-box-left,
   .member-box-right {
-    padding: 32px;
+    padding: 32px ;
   }
 }
 
