@@ -14,10 +14,11 @@
     <script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
 
     <!-- 2025/12/13 新增 -->
-    <link rel="stylesheet" href="./css/member2025.css" />
+    <link rel="stylesheet" href="./css/member_Info2025.css" />
     <link rel="stylesheet" type="text/css" href="./css/header2025.css" />
     <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="./css/all.new.min.css" />
+
     <!-- Yahoo 關鍵字廣告 -->
     <script type="application/javascript">
       (function (w, d, t, r, u) {
@@ -404,7 +405,6 @@
 
       <div id="wrapper-main">
         <!-- Header -->
-
         <header id="header">
           <div class="header-link">
             <div class="headwe-container">
@@ -412,7 +412,7 @@
                 <a href="https://www.artisan.com.tw/">
                   <picture>
                     <source media="(max-width: 768px)" srcset="/images/logo_m.png" />
-                    <img src="./images/logo.png" alt="logo" class="logo-w" />
+                    <img src="https://www.artisan.com.tw/images/logo.png" alt="logo" class="logo-w" />
                   </picture>
                 </a>
               </div>
@@ -1092,103 +1092,107 @@
             </div>
           </nav>
         </header>
-
         <!-- /Header -->
         <div id="content">
-          <div class="member_login_banner">
-            <img src="images/member/member_banner.jpg" alt="會員登入" />
-
-            <div class="banner-overlay"></div>
-
-            <div class="container">
-              <div class="banner-text">
-                <h2>團體專區</h2>
-                <p>歡迎來到巨匠旅遊，登入會員，輕鬆掌握您的團體旅程。</p>
+          <div id="main_customer_tool">
+            <!-- 名稱 + 編輯按鈕 -->
+            <div class="name_edit">
+              <div class="name_title"><span id="Label1">黃博榮</span>　<span class="style1">您好：</span></div>
+              <div class="member_edit_tool">
+                <a id="LinkButton1" href="javascript:void(0)">
+                  <p>修改個人資料 ｜ <span>Edit Personal info</span></p>
+                </a>
               </div>
             </div>
-          </div>
-          <div class="container" id="content_member">
-            <div class="form-imfo">
-              <div class="member-box">
-                <div class="row">
-                  <div class="member-box-left">
-                    <div class="form-container">
-                      <form id="loginForm">
-                        <div class="form-group">
-                          <label for="txbSN"> 帳號</label>
-                          <div class="input-with-icon">
-                            <i class="fas fa-user"></i>
-                            <input type="txbSN" id="txbSN" class="form-control" placeholder="帳號預設為身分證字號" required />
-                          </div>
-                        </div>
 
-                        <div class="form-group">
-                          <label for="txbPW">密碼</label>
-                          <div class="input-with-icon">
-                            <i class="fas fa-lock"></i>
-                            <input type="password" id="txbPW" class="form-control" placeholder="密碼預設為西元出生年月日" required />
-                          </div>
-                        </div>
+            <!-- 表格區 -->
+            <div class="cus1_title">
+              <table>
+                <thead>
+                  <tr>
+                    <th>出發日期</th>
+                    <th>團名</th>
+                    <th>
+                      <a href="LinkToSurveyInstructions.pdf" target="_blank">意調表連結</a>
+                    </th>
+                    <th>領隊</th>
+                    <th>同行/業務</th>
+                    <th>說明會時間</th>
+                    <th>說明會地點</th>
+                    <th>備註</th>
+                    <th>我有話要說</th>
+                    <th>已填人數</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="出發日期"><span>2025/01/07</span></td>
+                    <td data-label="團名">
+                      <span><a href="#">東歐 25S醉心奧捷斯匈11天東歐 25S醉心奧捷斯匈11天東歐 25S醉心奧捷斯匈11天</a></span>
+                    </td>
+                    <td data-label="意調表連結">
+                      <span><a href="#">表單連結</a></span>
+                    </td>
+                    <td data-label="領隊"><span>王小明</span></td>
+                    <td data-label="同行/業務"><span>李小華</span></td>
+                    <td data-label="說明會時間"><span>14:00</span></td>
+                    <td data-label="說明會地點"><span>台北辦公室</span></td>
+                    <td data-label="備註"><span>無</span></td>
+                    <td data-label="我有話要說"><span>我要說!!</span></td>
+                    <td data-label="已填人數"><span>2</span></td>
+                  </tr>
+                  <tr>
+                    <td data-label="出發日期"><span>2025/01/09</span></td>
+                    <td data-label="團名">
+                      <span><a href="#">中西歐 英倫搖滾13天</a></span>
+                    </td>
+                    <td data-label="意調表連結">
+                      <span><a href="#">表單連結</a></span>
+                    </td>
+                    <td data-label="領隊"><span>張小華</span></td>
+                    <td data-label="同行/業務"><span>王小明</span></td>
+                    <td data-label="說明會時間"><span>10:00</span></td>
+                    <td data-label="說明會地點"><span>台中辦公室</span></td>
+                    <td data-label="備註"><span>無</span></td>
+                    <td data-label="我有話要說"><span>我要說!!</span></td>
+                    <td data-label="已填人數"><span>21</span></td>
+                  </tr>
+                  <tr>
+                    <td data-label="出發日期"><span>2025/01/09</span></td>
+                    <td data-label="團名">
+                      <span><a href="#">北歐五國．冰島縮影．挪威經典雙峽灣15天 </a></span>
+                    </td>
+                    <td data-label="意調表連結">
+                      <span><a href="#">表單連結</a></span>
+                    </td>
+                    <td data-label="領隊"><span>張小華</span></td>
+                    <td data-label="同行/業務"><span>王小明</span></td>
+                    <td data-label="說明會時間"><span>10:00</span></td>
+                    <td data-label="說明會地點"><span>台中辦公室</span></td>
+                    <td data-label="備註"><span>無</span></td>
+                    <td data-label="我有話要說"><span>我要說!!</span></td>
+                    <td data-label="已填人數"><span>18</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-                        <div class="checkbox-group">
-                          <input type="checkbox" id="remember" />
-                          <label for="remember">30天內記住帳號 / </label>
-                          <a
-                            id="LinkButton1"
-                            href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions('LinkButton1', '', true, '', '', false, true))"
-                            >忘記密碼?</a
-                          >
-                        </div>
+            <!-- 分頁 -->
+            <div id="cus_page">
+              <a href="#" class="first">最前一頁</a>
+              <a href="#" class="prev">上一頁</a>
+              <a href="#" class="next">下一頁</a>
+              <a href="#" class="last">最後一頁</a>
+            </div>
 
-                        <button type="submit" class="submit-btn">登入</button>
+            <!-- 說明文字 -->
+            <div class="info01">如上述資料有任何變動，煩請您更新方便我們提供您更好的服務。</div>
 
-                        <div class="divider">
-                          <span>關注我們</span>
-                        </div>
-
-                        <div class="social-login">
-                          <a href="https://www.facebook.com/artisantour" target="_blank">
-                            <button type="button" class="social-btn google-btn">
-                              <i class="fab fab-facebook-square"></i>
-                              粉絲專頁
-                            </button>
-                          </a>
-
-                          <a href="https://www.instagram.com/artisan_tour/" target="_blank">
-                            <button type="button" class="social-btn github-btn">
-                              <i class="fab fab-instagram"></i>
-                              打卡秘境
-                            </button>
-                          </a>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="member-box-right">
-                    <p>
-                      * 帳號預設為<span class="style_member_strong">身分證字號</span><br />
-                      * 密碼預設為<span class="style_member_strong">西元出生年月日</span>，ex：出生日為1950年 1月2日，請輸入：19500102<br />
-                      <span class="p-dashed-line"></span>
-                      ※巨匠旅遊嚴格保護每一位客人的個人資料，未經客人同意絕不對外揭露!並遵守法律上權利責任規範。<br />
-                    </p>
-
-                    <a class="material" href="http://www.artisan.com.tw/Notes.aspx">個人資料保護說明</a>
-                    <div class="p-dashed-line"></div>
-                    <div class="epaper_title">
-                      <div class="epaper-row">
-                        <div class="epaper-left">
-                          <img src="images/member/epaper_title.png" alt="電子報標題" />
-                        </div>
-                        <div class="epaper-right">
-                          <input name="txbEMail" type="text" id="txbEMail" placeholder="請輸入Email" />
-                          <button type="submit" class="epaper-btn-flat">訂閱</button>
-                          <span id="revEmail">Email格式不正確</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <!-- epaper 區 -->
+            <div class="epaper-center">
+              <input name="txbEMail" type="text" id="txbEMail" placeholder="請輸入Email" />
+              <button type="submit" class="epaper-btn-flat">訂閱</button>
+              <span id="revEmail">Email格式不正確</span>
             </div>
           </div>
         </div>
