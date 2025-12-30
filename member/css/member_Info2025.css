@@ -162,11 +162,10 @@ p, li {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 2px;
-  padding-bottom: 5px;
 }
 
 .name_title .style1 {
-  font-weight: 400;
+  font-weight: 600;
   margin-left: 4px;
 }
 
@@ -211,6 +210,10 @@ p, li {
   text-align: center;
 }
 
+.cus1_title thead th a {
+   color: var(--text-gray);
+}
+
 /* 內容 */
 .cus1_title tbody td {
   border: 1px solid #ccc;
@@ -221,7 +224,7 @@ p, li {
 }
 
 /* hover 整列（排除團名） */
-.cus1_title tbody tr:hover td:not(:nth-child(2)) {
+.cus1_title tbody tr:hover {
   background-color: #f6f6f6;
 }
 
