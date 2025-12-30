@@ -48,34 +48,42 @@ p, li {
 .style1,
 .question_con {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 10px auto;
-  font-size: 16px;
+  letter-spacing: 0.2rem;
 }
 
-.style1 { color: #660099; }
+.style1 { 
+  font-size: 20px;
+  color: #660099; 
+}
 
-.question_con { color: #666; line-height: 28px; }
+.question_con {
+  font-size: 16px; 
+  color: #666; 
+  line-height: 30px; 
+}
 
 /* ===============================
    團號區塊
 ================================ */
 .test {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 20px;
+  gap: 20px;
 }
 
 .question_Data,
 .question_Data2 {
   width: calc(50% - 20px);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #1678b1;
   white-space: normal;
+  letter-spacing: 0.1rem;
 }
 
 /* ===============================
@@ -83,9 +91,9 @@ p, li {
 ================================ */
 .question_list {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 10px auto;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 40px;
   color: #666;
 }
@@ -157,7 +165,7 @@ p, li {
 ================================ */
 #textarea {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   height: 120px;
   margin: 20px auto;
   display: block;
