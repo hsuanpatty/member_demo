@@ -6,6 +6,7 @@
   --red-haver: rgb(224, 3, 3);
   --page:#fd4044;
   --red-title:#ce2222;
+  --red-cus1-haver:#ff1a1e;
   --text: #2d3436;
   --primary: #575757;
   --text-gray:#636262;
@@ -140,7 +141,7 @@ p, li {
 
 /* ---------- 名稱 + 編輯按鈕 ---------- */
 #main_customer_tool {
-  width: 1100px;
+  width: 1120px;
   margin: 0 auto;
   padding: 60px 0 40px;
   font-family: "新細明體";
@@ -188,7 +189,7 @@ p, li {
 
 /* ---------- 表格區 ---------- */
 .cus1_title {
-  width: 1100px;
+  width: 1120px;
   margin-bottom: 20px;
   overflow-x: auto;
 }
@@ -252,6 +253,15 @@ p, li {
   color: var(--red-cus1-haver);
 }
 
+.cus1_title td:nth-child(8) a {
+  color: var( --red);
+  text-decoration: none;
+}
+.cus1_title td:nth-child(8) a:hover {
+  color: var(--red-cus1-haver);
+}
+
+
 /* 桌面版固定團名欄寬度 */
 @media (min-width: 768px) {
   .cus1_title th:nth-child(2),
@@ -268,7 +278,7 @@ p, li {
 @media (max-width: 1399.98px) {
   #main_customer_tool {
     width: 100%;
-    padding: 40px 50px 20px;
+    padding: 40px 50px ;
   }
   .cus1_title {
     width: 100%;
@@ -277,7 +287,7 @@ p, li {
   }
 
   .cus1_title table {
-    min-width: 1020px;
+    min-width: 1120px;
     table-layout: auto;
   }
 }
@@ -362,7 +372,7 @@ p, li {
 
 @media (max-width: 575.98px) {
   #main_customer_tool {
-    padding: 30px 20px 20px;
+    padding: 30px 20px 40px;
   }
 
   .name_edit {
@@ -457,7 +467,7 @@ p, li {
   letter-spacing: 2px;
   text-align: center;
 
-  width: 80%;
+  width: 90%;
   line-height: 25px;
   margin: auto;
 }
