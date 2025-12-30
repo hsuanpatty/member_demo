@@ -2,39 +2,36 @@
    全域與主要區塊
 ================================ */
 :root {
-  --red: rgb(179, 46, 46);
-  --red-haver: rgb(224, 3, 3);
+  --red: #b32e2e;
+  --red-haver: #e00303;
   --page: #fd4044;
   --red-title: #ce2222;
   --text-gray: #595959;
   --primary: #575757;
-  --text-gray: #636262;
   --background: #ffffff;
   --white: #ffffff;
   --sheet-gray: #f2f2f2;
-  --lightgray:#ccc;
-  --darkgray:var(--darkgray);
+  --lightgray: #ccc;
+  --darkgray: #555;
   --transition: all 0.3s ease;
 }
 
 body {
   font-family: "Noto Sans TC", "微軟正黑體", Arial, sans-serif;
-  color: var(--text);
+  color: var(--text-gray);
   margin: 0;
-  background-position: top;
+  background: var(--background);
+  letter-spacing: 0.02rem;
 }
 
-p, li {
-  letter-spacing: 1px;
-}
+p, li { letter-spacing: 0.02rem; }
 
 #content {
-  overflow: hidden;
   width: 100%;
   max-width: 1320px;
   margin: 60px auto 0;
   padding: 0 20px;
-  letter-spacing: 1px;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) { #content { margin-top: 120px; } }
@@ -45,23 +42,23 @@ p, li {
 ================================ */
 #question { margin-top: 30px; }
 
-.style1,
-.question_con {
+.style1, .question_con {
   width: 100%;
   max-width: 1000px;
   margin: 10px auto;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 
 .style1 { 
-  font-size: 20px;
+  font-size: 18px;
   color: #660099; 
+  padding-top: 10px;
 }
 
 .question_con {
   font-size: 16px; 
   color: #666; 
-  line-height: 30px; 
+  line-height: 28px; 
 }
 
 /* ===============================
@@ -73,17 +70,23 @@ p, li {
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 12px 20px;
 }
 
 .question_Data,
 .question_Data2 {
-  width: calc(50% - 20px);
-  font-size: 18px;
-  font-weight: bold;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
   color: #1678b1;
-  white-space: normal;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.08rem;
+  line-height: 1.6;
+}
+
+/* 團號與團名佔一整行 */
+.test > .question_Data:nth-child(1),
+.test > .question_Data2:nth-child(2) {
+  width: 100%;
 }
 
 /* ===============================
@@ -96,14 +99,16 @@ p, li {
   font-size: 17px;
   line-height: 40px;
   color: #666;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
 }
 
 .question_list span {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 5px;        /* 垂直12px, 水平5px */
+  gap: 12px 10px;
   align-items: center;
-  margin-top: 6px;       /* 標題與選項間距 */
+  margin-top: 6px;
 }
 
 .question_list span label {
@@ -114,78 +119,80 @@ p, li {
 }
 
 .question_list input[type="text"] {
-  padding: 4px 8px;
+  padding: 6px 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
-  height: 30px;
+  height: 40px;
   width: 100%;
-  max-width: 400px;
 }
 
-/* 專門調整 Q15_1_1 / Q15_1_2 */
+/* Q13 不換行 */
+.question_list.q13 span { flex-wrap: nowrap; }
+
+/* Q15 文字框 */
 #Q15_1_1,
-#Q15_1_2 {
-  width: 60px;
-  margin-right: 6px;
-}
+#Q15_1_2 { width: 60px; margin-right: 6px; }
 
 #Q17 {
-  width: 100%;       /* 填滿父容器 */
-  max-width: 800px;  /* 與其他題目統一最大寬度 */
+  width: 100%;
   padding: 8px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
-  resize: vertical;  /* 只允許垂直調整高度 */
-}
-
-.question_bottom {
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
-}
-
-.question_bottom p{
-  line-height: 25px;
-}
-
-@media (max-width: 768px) {
-  .question_list span { gap: 8px 2px; }
-  .question_list span label { margin-right: 8px; font-size: 16px; }
-  #Q15_1_1,
-  #Q15_1_2 { width: 40px; margin-right: 4px; }
-
+  resize: vertical;
 }
 
 /* ===============================
-   說明文字
+   說明文字 + textarea
 ================================ */
-#textarea {
+.notice-box-scroll {
   width: 100%;
-  max-width: 1000px;
-  height: 120px;
+  max-width: 1000px;  
   margin: 20px auto;
-  display: block;
-  padding: 8px;
-  box-sizing: border-box;
-
-  line-height: 25px;
-  letter-spacing: 0.1rem;
-
-  color: var(--text-gray);
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #555;
+  overflow-y: auto;       
 }
+
+.notice-box-scroll .notice-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: left;    
+}
+
+.notice-box-scroll ol {
+  margin: 0;
+  text-align: left;  
+}
+
+.notice-box-scroll li {
+  margin-bottom: 8px;
+}
+
 
 /* ===============================
-   同意
+   同意勾選
 ================================ */
-.agree { width: 100%; max-width: 800px; margin: 10px auto; }
-.agree span {
-  color: var(--red-title);
-  padding-left: 5px;
+.agree {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
 }
+
+.agree span { color: var(--red-title); }
 
 /* ===============================
    按鈕
@@ -194,25 +201,28 @@ p, li {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 30px 0;
+  margin: 0 0 30px;
 }
 
 .question_buttom {
-  width: 80px;
-  height: 40px;
-  background: #e0e0e0;
+  width: 100px;
+  height: 44px;
+  background: var(--lightgray);
   text-align: center;
   cursor: pointer;
+  border-radius: 6px;
   transition: background-color 0.2s ease, transform 0.15s ease;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 .question_buttom a {
   display: block;
   width: 100%;
   height: 100%;
-  line-height: 40px;
+  line-height: 44px;
   text-decoration: none;
-  color: #555;
+  color: var(--darkgray);
   transition: color 0.2s ease;
 }
 
@@ -225,49 +235,102 @@ p, li {
   color: #fff;
 }
 
+/* ===============================
+   表單選項指標
+================================ */
+[type="checkbox"], [type="radio"] { cursor: pointer; }
 
+/* ===============================
+   問卷底部置中
+================================ */
+.question_bottom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  align-items: stretch; /* 讓 textarea 撐滿 */
+}
 
-[type="checkbox"], [type="radio"] {
-  cursor: pointer;
+.question_bottom p { 
+  color: var(--red-haver);
+  line-height: 25px; 
 }
 
 /* ===============================
    響應設定
 ================================ */
-@media (max-width: 992px) { .test { gap: 10px 15px; } }
-@media (max-width: 768px) {
-  .test { flex-direction: column; }
-  .question_Data,
-  .question_Data2,
-  .question_list,
-  #textarea,
-  .agree,
-  .question_bottom { width: 95%; }
-  #question input[type="text"] { max-width: 100%; }
-
-  .style1,
-  .question_con {
-    width: 100%;
+@media (max-width: 992px) { 
+  .test { 
+    gap: 10px 15px; 
+  } 
+  .question_bottom br {
+    display: none;
   }
 
-  #textarea {
-    font-size: 15px;
-    height: 180px;
-  }
-
-  .question_con {
-    text-align: justify;
-  }
-
-  .style1 {
-    font-size: 18px;
-  }
-
-  .question_list {
-    width: 100%;
-  }
-
-  .agree {
-    margin: 0 auto;
+  .notice-box-scroll ol {
+    padding-left: 0;
   }
 }
+@media (max-width: 768px) {
+  .test { flex-direction: column; }
+  .question_Data, .question_Data2, .question_list, .agree, .question_bottom { width: 95%; max-width: 95%; }
+  #question input[type="text"] { max-width: 100%; }
+  .style1, .question_con { width: 100%; }
+  .question_con { text-align: justify; }
+  #question { margin-top: 10px; }
+  .question_list { width: 100%; font-size: 16px; }
+  .style1 { font-size: 18px; letter-spacing: 0; }
+
+  .buttom {
+    margin: 5px 0 10px;
+  }
+
+  .notice-box-scroll {
+    margin: 10px 0 20px;
+  }
+
+  .question_list span { 
+    gap: 5px;
+  }
+
+  .question_list input[type="text"] {
+    width: 100%;       /* 兩個框並排，留一些間距 */
+    margin-bottom: 10px; /* 兩框換行時垂直間距 */
+  }
+  /* 最後一個 input 不需要右側間距 */
+  .question_list input[type="text"]:last-child {
+    margin-right: 0;
+  }
+
+
+  /* Q13 手機版可以換行 */
+  .question_list.q13 span { flex-wrap: wrap; gap: 0 6px; }
+}
+
+@media (max-width: 575px) {
+    .style1  {
+        padding: 0;
+    }
+
+    #question {
+      margin-top: 20px
+    }
+    
+     #Q15 > div:first-child {
+    flex-wrap: wrap;   /* 換行 */
+  }
+
+  #Q15 > div:first-child input {
+    width: 35%;       /* 每個 input 撐滿一行 */
+    margin-bottom: 8px; /* 框間垂直間距 */
+  }
+
+  #Q15 > div:last-child input {
+    width: 35%;       /* 第二個問題的 input 也撐滿 */
+    margin-top: 4px;
+  }
+}
+  
