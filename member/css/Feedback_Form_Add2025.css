@@ -118,14 +118,14 @@ p, li { letter-spacing: 0.02rem; }
 .question_list span > div {
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;   /* 圈圈和文字一起換行 */
+  white-space: nowrap;  
   max-width: 100%;
 }
 
 .question_list span label {
-  display: inline-flex;      /* 讓圈圈與文字在同一行 */
+  display: inline-flex;     
   align-items: center;
-  white-space: nowrap;        /* 不拆開圈圈與文字 */
+  white-space: nowrap;        
   line-height: 1.6;
   cursor: pointer;
 }
@@ -147,6 +147,7 @@ p, li { letter-spacing: 0.02rem; }
   font-size: 14px;
   height: 40px;
   width: 100%;
+  margin-top: 4px;
 }
 
 /* Q13 桌機不換行 */
