@@ -103,6 +103,7 @@ p, li { letter-spacing: 0.02rem; }
   padding-bottom: 12px;
 }
 
+/* ⭐ 選項容器 */
 .question_list span {
   display: flex;
   flex-wrap: wrap;
@@ -111,13 +112,33 @@ p, li { letter-spacing: 0.02rem; }
   margin-top: 6px;
 }
 
-.question_list span label {
-  margin-right: 12px;
-  line-height: 1.6;
-  cursor: pointer;
-  white-space: nowrap;
+/* ⭐⭐ 圈圈 + 文字 = 一整組，整行換行 */
+.question_list span > label,
+.question_list span > span,
+.question_list span > div {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;   /* 圈圈和文字一起換行 */
+  max-width: 100%;
 }
 
+.question_list span label {
+  display: inline-flex;      /* 讓圈圈與文字在同一行 */
+  align-items: center;
+  white-space: nowrap;        /* 不拆開圈圈與文字 */
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+/* 圈圈大小、間距 */
+.question_list input[type="radio"],
+.question_list input[type="checkbox"] {
+  flex-shrink: 0;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* 文字輸入框 */
 .question_list input[type="text"] {
   padding: 6px 10px;
   box-sizing: border-box;
@@ -128,7 +149,7 @@ p, li { letter-spacing: 0.02rem; }
   width: 100%;
 }
 
-/* Q13 不換行 */
+/* Q13 桌機不換行 */
 .question_list.q13 span { flex-wrap: nowrap; }
 
 /* Q15 文字框 */
@@ -177,7 +198,6 @@ p, li { letter-spacing: 0.02rem; }
   margin-bottom: 8px;
 }
 
-
 /* ===============================
    同意勾選
 ================================ */
@@ -223,7 +243,6 @@ p, li { letter-spacing: 0.02rem; }
   line-height: 44px;
   text-decoration: none;
   color: var(--darkgray);
-  transition: color 0.2s ease;
 }
 
 .question_buttom:hover {
@@ -236,11 +255,6 @@ p, li { letter-spacing: 0.02rem; }
 }
 
 /* ===============================
-   表單選項指標
-================================ */
-[type="checkbox"], [type="radio"] { cursor: pointer; }
-
-/* ===============================
    問卷底部置中
 ================================ */
 .question_bottom {
@@ -251,7 +265,7 @@ p, li { letter-spacing: 0.02rem; }
   flex-direction: column;
   gap: 15px;
   text-align: center;
-  align-items: stretch; /* 讓 textarea 撐滿 */
+  align-items: stretch;
 }
 
 .question_bottom p { 
@@ -263,74 +277,53 @@ p, li { letter-spacing: 0.02rem; }
    響應設定
 ================================ */
 @media (max-width: 992px) { 
-  .test { 
-    gap: 10px 15px; 
-  } 
-  .question_bottom br {
-    display: none;
-  }
-
-  .notice-box-scroll ol {
-    padding-left: 0;
-  }
+  .test { gap: 10px 15px; } 
+  .question_bottom br { display: none; }
+  .notice-box-scroll ol { padding-left: 0; }
 }
+
 @media (max-width: 768px) {
   .test { flex-direction: column; }
-  .question_Data, .question_Data2, .question_list, .agree, .question_bottom { width: 95%; max-width: 95%; }
-  #question input[type="text"] { max-width: 100%; }
-  .style1, .question_con { width: 100%; }
-  .question_con { text-align: justify; }
-  #question { margin-top: 10px; }
-  .question_list { width: 100%; font-size: 16px; }
-  .style1 { font-size: 18px; letter-spacing: 0; }
-
-  .buttom {
-    margin: 5px 0 10px;
+  .question_Data,
+  .question_Data2,
+  .question_list,
+  .agree,
+  .question_bottom {
+    width: 95%;
+    max-width: 95%;
   }
 
-  .notice-box-scroll {
-    margin: 10px 0 20px;
+  .question_list { font-size: 16px; }
+
+  /* 所有 span 間距 */
+  .question_list span { gap: 6px 7px; }
+
+  /* Q1 特殊間距 */
+  .question_list span#Q1 { gap: 6px 14px; }
+
+  /* Q13 手機版可換行 */
+  .question_list.q13 span { flex-wrap: wrap; }
+
+  .question_list span {
+    margin-top: 0;
   }
 
-  .question_list span { 
-    gap: 5px;
-  }
-
-  .question_list input[type="text"] {
-    width: 100%;       /* 兩個框並排，留一些間距 */
-    margin-bottom: 10px; /* 兩框換行時垂直間距 */
-  }
-  /* 最後一個 input 不需要右側間距 */
-  .question_list input[type="text"]:last-child {
-    margin-right: 0;
-  }
-
-
-  /* Q13 手機版可以換行 */
-  .question_list.q13 span { flex-wrap: wrap; gap: 0 6px; }
+  .question_list input[type="radio"],
+  .question_list input[type="checkbox"] {
+    margin-right: 5px;
+  } 
 }
 
 @media (max-width: 575px) {
-    .style1  {
-        padding: 0;
-    }
+  #question { margin-top: 20px; }
 
-    #question {
-      margin-top: 20px
-    }
-    
-     #Q15 > div:first-child {
-    flex-wrap: wrap;   /* 換行 */
+  #Q15 > div:first-child {
+    flex-wrap: wrap;
   }
 
-  #Q15 > div:first-child input {
-    width: 35%;       /* 每個 input 撐滿一行 */
-    margin-bottom: 8px; /* 框間垂直間距 */
-  }
-
+  #Q15 > div:first-child input,
   #Q15 > div:last-child input {
-    width: 35%;       /* 第二個問題的 input 也撐滿 */
-    margin-top: 4px;
+    width: 35%;
+    margin-bottom: 8px;
   }
 }
-  
