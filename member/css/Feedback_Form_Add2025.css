@@ -296,18 +296,25 @@ p, li { letter-spacing: 0.02rem; }
 
   .question_list { font-size: 16px; }
 
-  /* 所有 span 間距 */
-  .question_list span { gap: 6px 7px; }
+  .question_list > span {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 7px;
+    margin-top: 0;
+  }
+
+  /* ✅ Q13 額外說明文字獨立一行 */
+  .question_list.q13 > span > span {
+    grid-column: 1 / -1;
+    font-size: 14px;
+    margin: 0;
+    white-space: normal;
+    color: #777;
+  }
+
 
   /* Q1 特殊間距 */
   .question_list span#Q1 { gap: 6px 14px; }
-
-  /* Q13 手機版可換行 */
-  .question_list.q13 span { flex-wrap: wrap; }
-
-  .question_list span {
-    margin-top: 0;
-  }
 
   .question_list input[type="radio"],
   .question_list input[type="checkbox"] {
