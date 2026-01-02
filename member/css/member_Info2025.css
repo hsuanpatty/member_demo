@@ -271,6 +271,15 @@ p, li {
     white-space: normal;
     word-break: break-word;
   }
+
+  .cus1_title th:nth-child(10),
+  .cus1_title td:nth-child(10) {
+    width: 130px;
+    min-width: 130px;
+    max-width: 130px;
+    white-space: normal;
+    word-break: break-word;
+  }
 }
 
 /* 平板可左右滑動 */
@@ -421,8 +430,8 @@ p, li {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 12px; /* 按鈕間距 */
-    flex-wrap: wrap; /* 手機自動換行 */
+    gap: 12px; 
+    flex-wrap: wrap; 
 }
 
 #cus_page a {
