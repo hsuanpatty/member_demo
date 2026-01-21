@@ -37,6 +37,8 @@ p, li { letter-spacing: 0.02rem; }
 @media (min-width: 768px) { #content { margin-top: 120px; } }
 @media (min-width: 992px) { #content { margin-top: 110px; } }
 
+
+
 /* ===============================
    標題與說明
 ================================ */
@@ -149,6 +151,7 @@ p, li { letter-spacing: 0.02rem; }
   width: 100%;
   margin-top: 4px;
 }
+
 
 /* Q13 桌機不換行 */
 .question_list.q13 span { flex-wrap: nowrap; }
@@ -334,4 +337,13 @@ p, li { letter-spacing: 0.02rem; }
     width: 35%;
     margin-bottom: 8px;
   }
+
+  #Q16 input[type="text"] {
+    height: 120px;        /* 想要多高改這裡 */
+    line-height: 1.4;
+  }
+
+   #Q17 {
+     height: 120px; 
+   }
 }
