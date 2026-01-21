@@ -160,6 +160,12 @@ p, li { letter-spacing: 0.02rem; }
 #Q15_1_1,
 #Q15_1_2 { width: 60px; margin-right: 6px; }
 
+#Q16 input[type="text"] {
+  height: 80px;       
+  line-height: 1.4;
+}
+
+
 #Q17 {
   width: 100%;
   padding: 8px;
@@ -168,6 +174,7 @@ p, li { letter-spacing: 0.02rem; }
   border-radius: 4px;
   font-size: 14px;
   resize: vertical;
+  height: 80px; 
 }
 
 /* ===============================
@@ -339,8 +346,7 @@ p, li { letter-spacing: 0.02rem; }
   }
 
   #Q16 input[type="text"] {
-    height: 120px;        /* 想要多高改這裡 */
-    line-height: 1.4;
+    height: 120px;        
   }
 
    #Q17 {
