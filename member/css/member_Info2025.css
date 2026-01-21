@@ -139,6 +139,7 @@ p, li {
     margin-bottom: 0px;
 }
 
+
 /* ---------- 名稱 + 編輯按鈕 ---------- */
 #main_customer_tool {
   width: 1120px;
@@ -371,6 +372,7 @@ p, li {
     font-weight: 600;
     text-align: left;
     letter-spacing: 0.1rem;
+    line-height: 25px;
   }
 
   .name_title .style1 {
@@ -567,4 +569,61 @@ p, li {
 
 .epaper-btn-flat:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+
+.epaper-center  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px ;
+
+    margin-top: 10px;
+    padding: 0;
+}
+
+.epaper-m {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.epaper-center .epaper-m h3 {
+  font-size: 20px;
+  padding-left: 5px;
+  color: #555;
+  padding-right: 10px;
+}
+
+  @media (max-width: 991.98px) {
+  .epaper-center  {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    gap: 8px ;
+
+    margin-top: 10px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .epaper-center .epaper-m h3 {
+    padding-right: 0;
+  }
+
+}
+
+@media (max-width: 350.98px) {
+  .epaper-center input[type="text"] {
+    margin-bottom: 10px;
+  }
+
+  .epaper-center .epaper-m h3 {
+    font-size: 17px;
+  }
+
+  .member_edit_tool a p {
+    font-size: 16px;
+  }
 }
